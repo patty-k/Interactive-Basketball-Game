@@ -140,6 +140,7 @@ play = in.readLine();
 while (play.equalsIgnoreCase("yes"));
 }//close main
 
+//the code that runs the tournament
 public static void faceoff() throws IOException
 {
 //intialize counter
@@ -215,6 +216,7 @@ x = 1;
 while(x != 1);
 }//close method faceoff
 
+//picking a random player
 public static void random()
 {
 
@@ -222,7 +224,7 @@ pick [1] = Player [(int)(Math.random()*x)];
 
 }//close method random
 
-
+//receiving player input from the user
 public static void enterPlayer() throws IOException
 {
 	
@@ -250,6 +252,7 @@ while(line.compareToIgnoreCase("quit")!=0);
 
 }// close method (Enter show)
 
+//show the players entered in the tournament
 public static void showPlayers() throws IOException
 {
 //counter
@@ -264,6 +267,7 @@ System.out.println(" ");
 }//close for
 }//close method (show players)
 
+//the points system for my tournament; if user guesses the correct winner: 5 points awarded, if the computer does then deduct 3 points and if both are correct then no points lost or given
 public static void points()
 {
 
@@ -290,6 +294,7 @@ System.out.println("Both program and user guessed incorrectly. No points lost or
 
 }//close method points
 
+//listing the prizes and awarding based on prize choice
 public static void prizes() throws IOException
 {
 do
@@ -387,6 +392,7 @@ System.out.println("Sorry, you are not eligible for this prize.");
 while (choice [0] != 5);
 }//close method prizes
 
+//changing the name of a player in the tournament
 public static void modPlayer() throws IOException
 {
 //string to hold user input
@@ -423,6 +429,7 @@ System.out.println("New player name is: " + Player[flag]+ "\n");
 
 }//close method (Modify Player)
 
+//sorting the players alphabetically
 public static void sortPlayer() throws IOException
 {
 
@@ -460,23 +467,7 @@ System.out.println(" ");
 
 }//close method (sort players)
 
-public static void showPlayer() throws IOException
-{
-//counter
-int i;
-
-System.out.println("LIST OF PLAYER(S)\n");
-
-//output
-for(i = 0; i <=(x - 1); i++)
-{
-
-System.out.println("Player: "+Player[i]);
-System.out.println(" ");
-
-}//close for
-}//close method (show players)
-
+//saving file of player choices to computer
 public static void saveFile() throws IOException
 {
 //counter
@@ -497,6 +488,7 @@ output.println(Player[i]);
 output.close();
 }//close method (Saving)
 
+//loading a file if it has been saved
 public static void load() throws IOException
 {
 
