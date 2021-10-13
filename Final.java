@@ -1,4 +1,4 @@
-//written by Patrick Kimumwe September 10, 2018
+//written by Patrick Kimumwe
 
 import java.io.*;
 import java.text.*;
